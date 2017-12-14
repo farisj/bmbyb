@@ -1,5 +1,6 @@
 require 'wordnik'
 require 'open-uri'
+require 'twitter'
 
 Wordnik.configure do |config|
   config.api_key = ENV['wordnik_api_key']
