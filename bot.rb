@@ -11,12 +11,12 @@ class BotMeByYourBot
   VERB_LIST_URL = 'https://gist.githubusercontent.com/farisj/f2ebb73fabfa20dfc40e7fa9de72ddd8/raw'.freeze
 
   def tweet
-    phrase = verb + " me by your " + noun
+    phrase = verb + " me by your " + noun + " and i'll " + verb " you by mine"
     client.update(phrase)
   end
 
   def verb
-    verb_list.sample
+    @verb ||= verb_list.sample
   end
 
   def verb_list
